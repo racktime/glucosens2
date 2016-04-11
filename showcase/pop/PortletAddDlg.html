@@ -1,0 +1,12 @@
+﻿<p-dialog header="pop test" [(visible)]="display">
+   <p-dataTable [value]="cars" scrollable="true"  scrollHeight="200">        
+        <p-column field="type" header="type"></p-column>
+        <p-column field="name" header="name"></p-column>
+    </p-dataTable>
+    <footer>
+        <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+            <button type="button" pButton icon="fa-close" (click)="hide($event)" label="No"></button>
+            <button type="button" pButton icon="fa-check" (click)="add($event)" label="Add"></button>
+        </div>
+    </footer>
+</p-dialog>

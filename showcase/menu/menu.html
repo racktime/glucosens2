@@ -1,0 +1,31 @@
+<div id="MENUSIDEindent">
+    <span id="LOGO" class="">
+        <a href="#" [routerLink]="['HomePage']" (click)="toggleMenu($event)" [ngClass]="{'active':mobileMenuActive}">
+        test
+        </a>
+        <!--<img id="BlueLogo" alt="logo" src="showcase/resources/images/primeng.png" class="hiddenLogo"/> -->
+    </span>
+    <span id="menu_input" #inputmenutitle class="MenuSideMainLink bordersOfMenuSide" [class.MenuSideMainLinkDark]="inputmenutitle.id == activeMenuId" (click)="activeMenuId = inputmenutitle.id">
+    <img src="showcase/resources/images/mono/input.svg" />
+    <img class="hiddenIcons" src="showcase/resources/images/mono/inputBlue.svg" />
+    <span class="MainLinkText">Input</span>
+    </span>
+    <div class="SubMenuLinkContainer" [ngClass]="{submenushow: (inputmenutitle.id == activeMenuId), 'submenuhide': (inputmenutitle.id != activeMenuId)}">
+        <a class="SubMenuLink" [routerLink]="['AutoCompleteDemo']" (click)="mobileMenuActive = false">&#9679; AutoComplete</a>
+    </div>
+     <span id="data_menutitle" #datamenutitle class="MenuSideMainLink bordersOfMenuSide" [class.MenuSideMainLinkDark]="datamenutitle.id == activeMenuId" (click)="activeMenuId = datamenutitle.id"><img src="showcase/resources/images/mono/data.svg" /><img class="hiddenIcons" src="showcase/resources/images/mono/dataBlue.svg" /><span class="MainLinkText">Data</span></span>
+            <div class="SubMenuLinkContainer" [ngClass]="{'submenushow': (datamenutitle.id == activeMenuId), 'submenuhide': (datamenutitle.id != activeMenuId)}">
+                <a class="SubMenuLink" [routerLink]="['CarouselDemo']" (click)="mobileMenuActive = false">&#9679; Carousel</a>
+                <a class="SubMenuLink" [routerLink]="['DataGridDemo']" (click)="mobileMenuActive = false">&#9679; DataGrid</a>
+                <a class="SubMenuLink" [routerLink]="['DataListDemo']" (click)="mobileMenuActive = false">&#9679; DataList</a>
+                <a class="SubMenuLink" [routerLink]="['DataScrollerDemo']" (click)="mobileMenuActive = false">&#9679; DataScroller</a>
+                <a class="SubMenuLink" [routerLink]="['DataTableDemo']" (click)="mobileMenuActive = false">&#9679; DataTable</a>
+                <a class="SubMenuLink" [routerLink]="['OrderListDemo']" (click)="mobileMenuActive = false">&#9679; OrderList</a>
+                <a class="SubMenuLink" [routerLink]="['PaginatorDemo']" (click)="mobileMenuActive = false">&#9679; Paginator</a>
+                <a class="SubMenuLink" [routerLink]="['PickListDemo']" (click)="mobileMenuActive = false">&#9679; PickList</a>
+                <a class="SubMenuLink" [routerLink]="['ScheduleDemo']" (click)="mobileMenuActive = false">&#9679; Schedule</a>
+                <a class="SubMenuLink" [routerLink]="['TreeDemo']" (click)="mobileMenuActive = false">&#9679; Tree</a>
+                <a class="SubMenuLink" [routerLink]="['TreeTableDemo']" (click)="mobileMenuActive = false">&#9679; TreeTable</a>
+            </div>
+</div>
+
